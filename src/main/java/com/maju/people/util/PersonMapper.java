@@ -27,4 +27,11 @@ public class PersonMapper {
         return peopleList.stream().map(PersonResponseDTO::new).collect(Collectors.toList());
     }
 
+    public void updatePersonData(Person person, PersonRequestDTO personDTO) {
+
+        person.setName(personDTO.getName());
+        person.setCpf(personDTO.getCpf());
+        person.setAge(personDTO.getAge());
+    }
+
 }
